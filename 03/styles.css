@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --primary-color: rgb(103, 225, 255);
+  --secondary-color: rgb(103, 151, 255);
+  --text-color: rgba(0, 0, 0, 0.705);
+}
+
+body {
+  background-color: rgb(42, 42, 42);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all ease 0.4s;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+}
+
+.first_text {
+  position: absolute;
+  transition: all ease 0.4s;
+  top: 45%;
+}
+.second_text {
+  position: absolute;
+  top: 120%;
+  scale: 0;
+  transition: all ease 0.4s;
+  rotate: 45deg;
+}
+.card:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.2);
+  transition: all ease 0.4s;
+}
+
+.card:hover .first_text {
+  opacity: 0;
+  top: -10%;
+}
+.card:hover .second_text {
+  scale: 1;
+  top: 46%;
+  rotate: 0deg;
+}

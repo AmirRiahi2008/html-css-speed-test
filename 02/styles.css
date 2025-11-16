@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+:root {
+  --main-color: #adff30;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+}
+
+button {
+  border: 3px solid var(--main-color);
+  overflow: hidden;
+  border-radius: 30px;
+  /* padding: 15px 30px; */
+  display: flex;
+  width: 12rem;
+  background-color: transparent;
+  align-items: center;
+  position: relative;
+  transition: all ease 0.5s;
+  justify-content: center;
+  height: 4rem;
+}
+
+.text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: monospace;
+  transition: all ease 0.5s;
+  color: var(--main-color);
+  right: 3rem;
+}
+.left__icon {
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -2rem;
+  transition: all ease 0.5s;
+}
+.right__icon {
+  display: flex;
+  align-items: center;
+  transition: all ease 0.5s;
+  justify-content: center;
+  width: 1.5rem;
+  position: absolute;
+  right: 1.1rem;
+  margin-left: 0.5rem;
+}
+button::after {
+  content: "";
+  position: absolute;
+  background-color: #deffab;
+  width: 0;
+  transition: all ease 0.5s;
+
+  height: 0;
+  z-index: -1;
+}
+
+button:hover::after {
+  animation: circl 1.2s forwards;
+}
+button:not(:hover)::after {
+  animation: circleOut 0.7s forwards;
+}
+
+@keyframes circl {
+  from {
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  to {
+    width: 30rem;
+    height: 30rem;
+    opacity: 1;
+  }
+}
+@keyframes circleOut {
+  from {
+    width: 14rem;
+    height: 14rem;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  to {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+}
+button:hover .text {
+  color: black;
+}
+button:hover .right__icon {
+  right: -2rem;
+}
+button:hover .text {
+  right: 1.8rem;
+}
+button:hover .left__icon {
+  left: 1.6rem;
+}
+button:hover {
+  border-radius: 10px;
+}

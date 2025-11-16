@@ -45,3 +45,6 @@ label::after {
 input:checked + label::after {
   left: 62%;
 }
+input:checked + label{
+  background-color: rgb(67, 0, 156);
+}
