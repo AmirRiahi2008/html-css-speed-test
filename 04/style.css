@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;font-weight: bold;
+    transition: all ease .4s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(63, 63, 63);
+}
+.container{
+    position: relative;
+}
+.container_main{
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000000;
+
+}
+.main_card{
+    background-color: rgb(58, 165, 253);
+    display: flex;
+    transition: all ease .4s;
+    padding: 10px 11.4px;
+    font-weight: bold;color: white;
+}
+.h_main{
+}
+.o_main{}
+.v_main{}
+.e_main{}
+.r_main{}
+.container_black{
+    display: flex;
+    position: absolute;
+    z-index: 999999;
+    transition: all ease .4s;
+    overflow: hidden;
+    
+}
+.black_card{
+    padding:11px;
+    color: white;
+
+    background-color: black;
+}
+
+.w{
+    transition: all ease .4s;
+    transform: translateY(43px);
+}
+.o{
+    transition: all ease .4s;
+    transform: translateY(-40px);
+
+}
+.r{
+    transition: all ease .4s;
+    transform: translateY(43px);
+
+}
+.l{
+    transition: all ease .4s;
+    transform: translateY(-40px);
+
+}
+.d{
+    transform: translateY(43px);
+    transition: all ease .4s;
+
+}
+.container:hover .container_black{
+    z-index: 100000000;
+}
+.container:hover .w{
+    transform: translateY(0px);
+}
+.container:hover .o{
+    transform: translateY(0px);
+}
+.container:hover .r{
+    transform: translateY(0px);
+}
+.container:hover .l{
+    transform: translateY(0px);
+}
+.container:hover .d{
+    transform: translateY(0px);
+}
