@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjusted to have gap between boxes */
+}
+
+.red {
+  background-color: #f43f5e;
+}
+
+.blue {
+  background-color: #3b82f6;
+}
+
+.green {
+  background-color: #22c55e;
+}
+
+.container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.container .box p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.container .box p.second-text {
+  font-size: 0.7em;
+}
+
+.container .box:hover {
+  transform: scale(1.1);
+}
+
+.container:hover > .box:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9);
+}
