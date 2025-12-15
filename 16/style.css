@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  border: 2px solid rgb(91, 91, 240);
+  width: 156px;
+  border-radius: 100px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+}
+.icon {
+  color: white;
+}
+.circle {
+  width: 47px;
+  height: 47px;
+  background-color: rgb(91, 91, 240);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 1rem;
+}
+input {
+  display: none;
+}
+.square {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: white;
+}
+.open {
+  display: none;
+}
+
+input:checked + label {
+  width: 100px;
+}
