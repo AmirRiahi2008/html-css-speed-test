@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(54, 54, 54);
+}
+:root {
+  --btn-bg: rgb(193, 163, 98);
+  --btn-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+  --btn-hovered-text-color: #212121;
+}
+button {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 35px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--btn-bg);
+  width: 50px;
+  height: 50px;
+  transition: all ease 0.3s;
+  inset: 0;
+  z-index: -1;
+  scale: 0;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+button:hover::before {
+  opacity: 1;
+  scale: 3;
+}
+button:hover {
+  color: var(--btn-hovered-text-color);
+}
